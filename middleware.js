@@ -16,8 +16,8 @@ const useEmailAlerts = (errors) => function(err, req, res, next){
       'FromEmail': ALERT_FROM_EMAIL,
       'FromName' : ALERT_FROM_NAME,
       'Subject' : `ALERT: a ${err.name} occurred.`,
-      'text-part' : `Something went wrong. Error: ${err.message} at ${err.stack}`,
-      'recipients' : [{'Email' : ALERT_TO_EMAIL}]
+      'Text-part' : `Something went wrong. Error: ${err.message} at ${err.stack}`,
+      'Recipients' : [{'Email' : ALERT_TO_EMAIL}]
     };
     emailer(data);
   }
